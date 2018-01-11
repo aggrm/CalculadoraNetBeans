@@ -13,8 +13,8 @@ import java.awt.Color;
  */
 public class VentanaCalculadora extends javax.swing.JFrame {
 
-    String numero1;
-    String operacion;
+    String numero1;                                                             //De instancia los números
+    String operacion;                                                           //de instancia las operaciones
     
     /**
      * Creates new form VentanaCalculadora
@@ -28,7 +28,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private void pintaNumero (String numero)
     {
         String cadena1 = jLabel1.getText();
-        if (cadena1.equals ("0"))//estoy en el caso inicial de la calculadora con un 0 en el display
+        if (cadena1.equals ("0"))                                               //Estoy en el caso inicial de la calculadora con un 0 en el display
         {
             jLabel1.setText (numero);
         }
@@ -76,7 +76,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         botonBorradoCompleto = new javax.swing.JButton();
         botonBoradoNum = new javax.swing.JButton();
         botonBorrarUnNumero = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        botonDeLaComa = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -89,7 +89,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         jLabel1.setOpaque(true);
 
         boton7.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton7.setForeground(new java.awt.Color(255, 255, 255));
         boton7.setText("7");
         boton7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -98,7 +97,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton8.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton8.setForeground(new java.awt.Color(255, 255, 255));
         boton8.setText("8");
         boton8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -107,7 +105,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton9.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton9.setForeground(new java.awt.Color(255, 255, 255));
         boton9.setText("9");
         boton9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -116,7 +113,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton4.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton4.setForeground(new java.awt.Color(255, 255, 255));
         boton4.setText("4");
         boton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -125,7 +121,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton5.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton5.setForeground(new java.awt.Color(255, 255, 255));
         boton5.setText("5");
         boton5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -134,7 +129,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton6.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton6.setForeground(new java.awt.Color(255, 255, 255));
         boton6.setText("6");
         boton6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -143,7 +137,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton1.setForeground(new java.awt.Color(255, 255, 255));
         boton1.setText("1");
         boton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -152,7 +145,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton2.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton2.setForeground(new java.awt.Color(255, 255, 255));
         boton2.setText("2");
         boton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -161,7 +153,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton3.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton3.setForeground(new java.awt.Color(255, 255, 255));
         boton3.setText("3");
         boton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -170,7 +161,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         botonSuma.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        botonSuma.setForeground(new java.awt.Color(255, 255, 255));
         botonSuma.setText("+");
         botonSuma.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -179,7 +169,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         botonResta.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        botonResta.setForeground(new java.awt.Color(255, 255, 255));
         botonResta.setText("-");
         botonResta.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -188,7 +177,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         botonPor.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        botonPor.setForeground(new java.awt.Color(255, 255, 255));
         botonPor.setText("*");
         botonPor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -197,7 +185,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         boton0.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        boton0.setForeground(new java.awt.Color(255, 255, 255));
         boton0.setText("0");
         boton0.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -206,7 +193,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         botonIgual.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        botonIgual.setForeground(new java.awt.Color(255, 255, 255));
         botonIgual.setText("=");
         botonIgual.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -215,7 +201,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         botonDivision.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        botonDivision.setForeground(new java.awt.Color(255, 255, 255));
         botonDivision.setText("/");
         botonDivision.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -224,11 +209,9 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
 
         botonBorradoCompleto.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        botonBorradoCompleto.setForeground(new java.awt.Color(255, 255, 255));
         botonBorradoCompleto.setText("CE");
         botonBorradoCompleto.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -237,16 +220,28 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         });
 
         botonBoradoNum.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        botonBoradoNum.setForeground(new java.awt.Color(255, 255, 255));
         botonBoradoNum.setText("C");
+        botonBoradoNum.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botonBoradoNumMousePressed(evt);
+            }
+        });
 
         botonBorrarUnNumero.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        botonBorrarUnNumero.setForeground(new java.awt.Color(255, 255, 255));
-        botonBorrarUnNumero.setText("⇐");
+        botonBorrarUnNumero.setText("←");
+        botonBorrarUnNumero.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botonBorrarUnNumeroMousePressed(evt);
+            }
+        });
 
-        jButton4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText(".");
+        botonDeLaComa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        botonDeLaComa.setText(".");
+        botonDeLaComa.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                botonDeLaComaMousePressed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -277,7 +272,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                                     .addGroup(layout.createSequentialGroup()
                                         .addComponent(boton0, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                        .addComponent(botonDeLaComa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(botonIgual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -309,7 +304,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(botonBoradoNum, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(botonBorradoCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -338,7 +333,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                         .addComponent(boton0, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(botonIgual, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(botonDivision, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(botonDeLaComa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -431,10 +426,37 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         jLabel1.setText(String.valueOf(operando1));
         jLabel2.setText(numero1 + operacion + numero2);
     }//GEN-LAST:event_botonIgualMousePressed
-
+//REVISARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+//REVIASRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
     private void botonBorradoCompletoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBorradoCompletoMousePressed
-    
+        numero1 = "";                                                           //Llamo al número
+        jLabel1.setText("");                                                    //Dejo la memoria en blaco
     }//GEN-LAST:event_botonBorradoCompletoMousePressed
+
+    private void botonDeLaComaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonDeLaComaMousePressed
+        if(jLabel1.getText().contains("."))
+        {
+                                                                                //Esto es para cuando en la pantalla tengo 0.
+        }
+        else
+        {
+            jLabel1.setText(jLabel1.getText()+".");                             //Cuando tengo un numero sin decimales, además no deja poner más comas.
+        }
+     
+    }//GEN-LAST:event_botonDeLaComaMousePressed
+
+    private void botonBoradoNumMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBoradoNumMousePressed
+       numero1 = "";                                                            //Llamo al número.
+       jLabel1.setText("0");                                                    //Para dejar la pantalla en 0.
+       jLabel2.setText("");                                                     //Para dejar la pantalla de las operaciones en blanco.
+    }//GEN-LAST:event_botonBoradoNumMousePressed
+
+    private void botonBorrarUnNumeroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBorrarUnNumeroMousePressed
+     String cadena = numero1;
+     cadena = cadena.substring(0, cadena.length() - 1);
+        
+     
+    }//GEN-LAST:event_botonBorrarUnNumeroMousePressed
                   
     /**
      * @param args the command line arguments
@@ -470,6 +492,8 @@ public class VentanaCalculadora extends javax.swing.JFrame {
             }
         });
     }
+    
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton boton0;
@@ -485,12 +509,12 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     private javax.swing.JButton botonBoradoNum;
     private javax.swing.JButton botonBorradoCompleto;
     private javax.swing.JButton botonBorrarUnNumero;
+    private javax.swing.JButton botonDeLaComa;
     private javax.swing.JButton botonDivision;
     private javax.swing.JButton botonIgual;
     private javax.swing.JButton botonPor;
     private javax.swing.JButton botonResta;
     private javax.swing.JButton botonSuma;
-    private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
