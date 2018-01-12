@@ -13,8 +13,8 @@ import java.awt.Color;
  */
 public class VentanaCalculadora extends javax.swing.JFrame {
 
-    String numero1;                                                             //De instancia los números
-    String operacion;                                                           //de instancia las operaciones
+    String numero1;                                                             //De instancia los números para poder utilizar por toda la clase
+    String operacion;                                                           //De instancia las operaciones poder utiliar por toda la clase
     
     /**
      * Creates new form VentanaCalculadora
@@ -40,9 +40,9 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     
     private void realizaOperacion ()
     {
-        numero1 = jTextField1.getText();
-        jTextField2.setText(numero1 + operacion);
-        jTextField1.setText("0");
+        numero1 = jTextField1.getText();                                        //Pilla los numeros cuando se presionan 
+        jTextField2.setText(numero1 + operacion);                               //Pinta la operación
+        jTextField1.setText("0");                                               //El Display dejarlo en 0
         
     }
     
@@ -270,11 +270,6 @@ public class VentanaCalculadora extends javax.swing.JFrame {
                 botonDeLaComaMousePressed(evt);
             }
         });
-        botonDeLaComa.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonDeLaComaActionPerformed(evt);
-            }
-        });
 
         jTextField1.setBackground(new java.awt.Color(0, 0, 0));
         jTextField1.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
@@ -285,7 +280,7 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         jTextField1.setEnabled(false);
 
         jTextField2.setBackground(new java.awt.Color(0, 0, 0));
-        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jTextField2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(102, 255, 0));
         jTextField2.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextField2.setEnabled(false);
@@ -388,70 +383,73 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void boton7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton7MousePressed
-        pintaNumero("7");
+        pintaNumero("7");                                                       //Pone el numero
     }//GEN-LAST:event_boton7MousePressed
 
     private void boton8MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton8MousePressed
-       pintaNumero("8");
+       pintaNumero("8");                                                        //Pone el numero
     }//GEN-LAST:event_boton8MousePressed
 
     private void boton9MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton9MousePressed
-        pintaNumero("9");
+        pintaNumero("9");                                                       //Pone el numero
     }//GEN-LAST:event_boton9MousePressed
 
     private void boton4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton4MousePressed
-       pintaNumero("4");
+       pintaNumero("4");                                                        //Pone el numero
     }//GEN-LAST:event_boton4MousePressed
 
     private void boton5MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton5MousePressed
-        pintaNumero("5");
+        pintaNumero("5");                                                       //Pone el numero
     }//GEN-LAST:event_boton5MousePressed
 
     private void boton6MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton6MousePressed
-        pintaNumero("6");
+        pintaNumero("6");                                                       //Pone el numero
     }//GEN-LAST:event_boton6MousePressed
 
     private void boton1MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton1MousePressed
-       pintaNumero("1");
+       pintaNumero("1");                                                        //Pone el numero
     }//GEN-LAST:event_boton1MousePressed
 
     private void boton2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton2MousePressed
-        pintaNumero("2");
+        pintaNumero("2");                                                       //Pone el numero
     }//GEN-LAST:event_boton2MousePressed
 
     private void boton3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton3MousePressed
-        pintaNumero("3");
+        pintaNumero("3");                                                       //Pone el numero
     }//GEN-LAST:event_boton3MousePressed
 
     private void boton0MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_boton0MousePressed
-        pintaNumero("0");
+        pintaNumero("0");                                                       //Pone el numero
     }//GEN-LAST:event_boton0MousePressed
 
     private void botonSumaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonSumaMousePressed
-      operacion = "+";
-      realizaOperacion();
+      operacion = "+";                                                          //Pone el +
+      realizaOperacion();                                                       //Hace la operación
     }//GEN-LAST:event_botonSumaMousePressed
 
     private void botonRestaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonRestaMousePressed
-       operacion = "-";
-      realizaOperacion();
+       operacion = "-";                                                         //Pone el -
+      realizaOperacion();                                                       //Hace la operación
     }//GEN-LAST:event_botonRestaMousePressed
 
     private void botonPorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonPorMousePressed
-      operacion = "*";
-      realizaOperacion();
+      operacion = "*";                                                          //Pone *
+      realizaOperacion();                                                       //Hace la operación
     }//GEN-LAST:event_botonPorMousePressed
 
     private void botonDivisionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonDivisionMousePressed
-      operacion = "/";
-      realizaOperacion();
+      operacion = "/";                                                          //Pone el /
+      realizaOperacion();                                                       //Hace la operación
     }//GEN-LAST:event_botonDivisionMousePressed
 
     private void botonIgualMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonIgualMousePressed
+        
         String numero2 = jTextField1.getText();
         
         double operando2 = Double.valueOf(numero2);
         double operando1 = Double.valueOf(numero1);
+        
+        //Condiciones para poder hacer las operaciones con IgnoreCase
         
         if(operacion.equalsIgnoreCase("+"))
         {
@@ -469,14 +467,16 @@ public class VentanaCalculadora extends javax.swing.JFrame {
         {
             operando1 *= operando2;
         }
+        
         //Esta es lo que hace despues de pulsar el =
-        jTextField1.setText(String.valueOf(operando1));
-        jTextField2.setText(numero1 + operacion + numero2);
+        jTextField1.setText(String.valueOf(""));                                //Si le damos al = el Display quyedara en 0
+        jTextField2.setText(numero1 + operacion + numero2);                     //El Display2 anota los botones que vas presionanado
+        jTextField2.setText(String.valueOf(operando1));                         //Da el resulñtado en el Dispalay2
+        
     }//GEN-LAST:event_botonIgualMousePressed
-//REVISARRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
-//REVIASRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRRR
+
     private void botonCEMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCEMousePressed
-        jTextField1.setText("");
+        jTextField1.setText("");                                                //Deja el Display en " "
     }//GEN-LAST:event_botonCEMousePressed
 
     private void botonDeLaComaMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonDeLaComaMousePressed
@@ -492,21 +492,21 @@ public class VentanaCalculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonDeLaComaMousePressed
 
     private void botonCMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCMousePressed
-       numero1 = "0";                                                            //Llamo al número.
+       numero1 = "0";                                                           //Llamo al número.
        jTextField1.setText("0");                                                //Para dejar la pantalla en 0.
-       jTextField2.setText("");                                                     //Para dejar la pantalla de las operaciones en blanco.
+       jTextField2.setText("");                                                 //Para dejar la pantalla de las operaciones en blanco.
     }//GEN-LAST:event_botonCMousePressed
 
     private void botonBorrarUnNumeroMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonBorrarUnNumeroMousePressed
-     String cadena = numero1;
-     cadena = cadena.substring(0, cadena.length() - 1);
-        
+     String borranumero = jTextField1.getText();                                //Primero que consiga el texto del Display     
+        borranumero = borranumero.substring(0,borranumero.length()-1);          //Cogemos el length del display
+        jTextField1.setText(borranumero);                                       
+        if (borranumero.length()==0)                                            //Para dejar el Display a 0 cuando borras el ultimo numer de la cadena de String
+        {
+            jTextField1.setText("0");
+        }
      
     }//GEN-LAST:event_botonBorrarUnNumeroMousePressed
-
-    private void botonDeLaComaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonDeLaComaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_botonDeLaComaActionPerformed
                   
     /**
      * @param args the command line arguments
